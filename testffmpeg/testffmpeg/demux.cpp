@@ -1,7 +1,7 @@
 #include <stdafx.h>
 #include "demux.h"
 
-Demuxer::Demuxer(std::string file_name):m_filename(file_name)
+Demuxer::Demuxer(std::string file_name):m_filename(file_name),m_avfcx(NULL)
 {
 
 }
@@ -17,13 +17,13 @@ bool Demuxer::init()
 
   if (avformat_open_input(&m_avfcx, m_filename.c_str(), 0, 0) < 0) 
   {
-    fprintf(stderr, "Could not open input file '%s'", m_filename.c_str());
+    assert(false&&"Could not open input file");
 	return false;
   }
 
   if (avformat_find_stream_info(m_avfcx, 0) < 0) 
   {
-    fprintf(stderr, "Failed to retrieve input stream information");
+    assert(false&&"Failed to retrieve input stream information");
 	return false;
   }
 

@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <tchar.h>
 #include <iostream>
+#include <assert.h>
 extern "C"
 {
 #include <libavutil/avutil.h>

@@ -1,5 +1,5 @@
-#ifndef MUX_H_
-#define MUX_H_
+#ifndef DEMUX_H_
+#define DEMUX_H_
 
 class Demuxer
 {
