@@ -41,3 +41,4 @@ void Demuxer::finish()
   avformat_close_input(&m_avfcx);
   av_free_packet(&m_pkt);
 }
+

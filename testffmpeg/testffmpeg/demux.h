@@ -1,3 +1,5 @@
+#ifndef MUX_H_
+#define MUX_H_
 
 class Demuxer
 {
@@ -12,3 +14,6 @@ private:
   std::string m_filename;
   AVPacket m_pkt;
 };
+
+#endif
+
